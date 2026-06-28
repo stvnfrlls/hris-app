@@ -450,11 +450,11 @@ export default function EmployeesPage() {
                                 employees.map((emp) => (
                                     <tr key={emp.id} className="hover:bg-gray-50 transition-colors">
                                         <td className="td text-center text-xs text-gray-500">{emp.employee_code}</td>
-                                        <td className="td text-center text-xs">{emp.department}</td>
-                                        <td className="td text-center text-xs">{emp.position}</td>
+                                        <td className="td text-center text-xs">{emp.department.name}</td>
+                                        <td className="td text-center text-xs">{emp.position.name}</td>
                                         <td className="td text-center text-xs">
                                             <span className={TYPE_BADGE[emp.employment_type] ?? 'badge-gray'}>
-                                                {capitalize(emp.employment_type?.replace('_', ' '))}
+                                                {capitalize(emp.position.employment_type?.replace('_', ' '))}
                                             </span>
                                         </td>
                                         <td className="td text-center text-xs text-gray-500">{emp.hire_date}</td>
