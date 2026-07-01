@@ -14,7 +14,12 @@ import LeaveBalancePage from './pages/LeaveBalancePage'
 import LeaveTypesPage from './pages/LeaveTypesPage'
 import SalaryPage from './pages/SalaryPage'
 import PayrollPeriodsPage from './pages/PayrollPeriodsPage'
-import PayrollPage from './pages/PayrollPage.jsx'
+import PayrollPage from './pages/PayrollPage'
+import ReportsDashboard from './pages/reports/ReportsDashboard'
+import AttendanceSummaryPage from './pages/reports/AttendanceSummaryPage'
+import TardinessReportPage from './pages/reports/TardinessReportPage'
+import PayrollSummaryPage from './pages/reports/PayrollSummaryPage'
+import HeadcountPage from './pages/reports/HeadcountsPage'
 
 export default function App() {
   return (
@@ -35,6 +40,11 @@ export default function App() {
               <Route path="/salary" element={<SalaryPage />} />
               <Route path="/payroll-periods" element={<PayrollPeriodsPage />} />
               <Route path="/payroll" element={<PayrollPage />} />
+              <Route path="/reports" element={<ReportsDashboard />} />
+              <Route path="/reports/attendance" element={<AttendanceSummaryPage />} />
+              <Route path="/reports/tardiness" element={<TardinessReportPage />} />
+              <Route path="/reports/payroll-summary" element={<PayrollSummaryPage />} />
+              <Route path="/reports/headcount" element={<HeadcountPage />} />
             </Route>
           </Route>
           <Route path="*" element={<Navigate to="/dashboard" replace />} />
